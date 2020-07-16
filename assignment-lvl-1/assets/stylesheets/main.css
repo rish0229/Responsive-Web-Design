@@ -1,0 +1,328 @@
+/* Resets */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* GLOBAL */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --clr-green: #37b667;
+  --clr-gray: #e9ecfc;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.btn {
+  text-transform: capitalize;
+  background-color: var(--clr-green);
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 5px;
+  transition: all 250ms;
+}
+.btn:hover {
+  background: rgb(229, 255, 229);
+  color: var(--clr-green);
+}
+
+/* HEADER */
+
+header {
+  background: #222946;
+  padding: 15px 0;
+}
+.nav-item {
+  padding: 10px 0;
+  margin-left: 40px;
+}
+.nav-item a {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+.nav-item a:hover {
+  color: var(--clr-green);
+}
+
+/* HERO */
+
+.hero {
+  background: var(--clr-gray);
+  height: calc(100vh - 81px);
+  padding: calc((100vh - 81px - 385.15px) / 2) 0;
+}
+.hero-article-text,
+.hero-article-image {
+  flex: 0 1 48%;
+}
+.hero-article-text h1 {
+  font-size: 2.5rem;
+}
+.hero-article-text p {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: rgb(94, 94, 94);
+  margin: 20px 0;
+}
+.hero-article-image img {
+  max-width: 100%;
+}
+
+/* MAIN-SECTION-2 */
+
+h2 {
+  text-align: center;
+  margin: 60px 0 30px;
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+.blog-post-1 {
+  flex: 0 1 350px;
+  padding: 0 20px;
+}
+.blog-image img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 15px;
+}
+h3 {
+  font-size: 1.8rem;
+}
+.blog-text p {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: rgb(94, 94, 94);
+  margin: 15px 0;
+}
+.blog-text .btn {
+  font-size: 0.9rem;
+  padding: 12px 17px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #222946;
+  padding: 30px 0;
+  color: #bec0ca;
+  margin-top: 60px;
+}
+.fab {
+  font-size: 1.6rem;
+  color: #bec0ca;
+  margin-left: 10px;
+}
+.fab:hover {
+  color: white;
+}
+
+/* MEDIA-QUERIES */
+
+/* MAX-WIDTH: 947px */
+
+@media screen and (max-width: 947px) {
+  .hero {
+    height: auto;
+  }
+}
+
+/* MAX-WIDTH - 768px */
+
+@media screen and (max-width: 768px) {
+  /* HEADER */
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    margin: 0 20px;
+  }
+
+  /* ḤERO */
+
+  .hero {
+    height: auto;
+  }
+  .hero .container {
+    flex-direction: column-reverse;
+  }
+  .hero-article-image {
+    margin-bottom: 50px;
+  }
+
+  /* MAIN-SECTION-2 */
+
+  .section-2 .flex {
+    flex-direction: column;
+  }
+  .blog-image img {
+    width: 100%;
+    height: auto;
+  }
+  .blog-post-1 {
+    margin-bottom: 40px;
+  }
+  .blog-image img {
+    margin: 10px 0;
+  }
+  .blog-text p {
+    margin: 10px 0;
+  }
+  .blog-post-1:last-child {
+    margin-bottom: 0;
+  }
+
+  /* FOOTER */
+
+  footer .flex {
+    flex-direction: column;
+  }
+  footer small {
+    font-size: 1.2rem;
+  }
+  .fab {
+    margin: 15px 5px 0;
+  }
+}
