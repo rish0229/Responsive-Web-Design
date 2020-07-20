@@ -537,15 +537,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* innerWIDTH */
-
-#inner-width {
-  position: fixed;
-  top: 0;
-  left: 0;
-  color: white;
-}
-
 /* MEDIA-QUERIES */
 
 /* MAX-WIDTH = 114Opx */
@@ -612,6 +603,7 @@ footer {
   }
 
   /* MAIN-SECTION-8 */
+
   .section-8 img {
     margin-right: 20px;
   }
@@ -759,9 +751,4 @@ footer {
   h5 {
     display: none;
   }
-}
-
-/* MAX-WIDTH: 460PX */
-
-@media screen and (max-width: 460px) {
 }
